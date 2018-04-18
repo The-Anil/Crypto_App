@@ -1,0 +1,123 @@
+{% include 'crypto_app/header.html' %}
+{% load static %}
+	<!--=== Header section Starts ===-->
+	<div id="header" class="header-section">
+		<!-- sticky-bar Starts-->
+		<div class="sticky-bar-wrap">
+			<div class="sticky-section">
+				<div id="topbar-hold" class="nav-hold container">
+					<nav class="navbar" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<!--=== Site Name ===-->
+							<a class="site-name navbar-brand" href="/crypto_app/"><span>C</span>rypto <span>A</span>pp</a>
+						</div>
+
+						<!-- Main Navigation menu Starts -->
+						<div class="collapse navbar-collapse navbar-responsive-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="/crypto_app/">Back</a></li>
+							</ul>
+						</div>
+						<!-- Main Navigation menu ends-->
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- sticky-bar Ends-->
+    </div>
+<!--=== Header section Ends ===-->
+
+
+	<!--=== Step-1 section Starts ===-->
+	<section id="step-1" class="section-step step-wrap">
+		<div class="container step animated" data-animation="bounceInLeft" data-animation-delay="700">
+			<div class="row">
+				<!-- Step Description Starts -->
+				<div class="col-md-8 step-desc">
+					<div class="col-md-2 center">
+						<div class="step-no">
+							<span class="no-inner">💰</span>
+						</div>
+					</div>
+
+					<div class="col-md-10 step-details">
+							<h3 class="step-title color-scheme">Litecoin</h3>
+							<p class="step-description">Litecoin is very close to Bitcoin, the only difference being that Litecoin has lower transaction fees and higher speeds. Litecoin operates on an open source protocol, which means everything about Litecoin has to be determined through consensus. Since its creation in 2011, Litecoin has aimed for lower block processing times. </p>
+                        <h5 class="step-title color-scheme">Unique Features : </h5>
+                        <ul class="sub-steps"> <!-- Sub steps here -->
+								<li>
+									<span class="icon fa fa-pencil color-scheme"></span>
+									<span class="sub-text">Proof of Work</span>
+								</li>
+                                <li>
+									<span class="icon fa fa-pencil color-scheme"></span>
+									<span class="sub-text">Decentralised</span>
+								</li>
+							</ul>
+					</div> <!-- End step-details -->
+				</div>
+				<!-- Step Description Ends -->
+				<div class="col-md-4 step-img">
+					<img src="{% static 'crypto_app/images/litecoin.jpg' %}" alt="" /> <!-- Step Photo Here -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=== Step-1 section Ends ===-->
+
+<!--=== Testimonials section Starts ===-->
+	<section id="section-testimonials" class="testimonials-wrap">
+		<div class="section-overlay"></div>
+		<div class="container testimonials center animated" data-animation="rollIn" data-animation-delay="500">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="testimonial-slider">
+						<!-- Single Testimonial Starts -->
+
+
+						<!-- Single Testimonial Starts -->
+						<div class="testimonial">
+							<p class="comment">
+								Litecoin has been around for a very long time and has shown success at keeping a healthy value to its cryptocurrencies.
+                            </p>
+						</div>
+						<!-- Single Testimonial Ends -->
+
+						<!-- Single Testimonial Starts -->
+						<div class="testimonial">
+							<p class="comment">
+								Also the largest Bitcoin wallet provider Coinbase has added the cryptocurrency to GDAX for trading. The longstanding trusted cryptocurrency has been a safe long term investment for quite a while now.
+                            </p>
+						</div>
+						<!-- Single Testimonial Ends -->
+                        <div class="testimonial">
+							<p class="comment">
+								 To have a successful cryptocurrency it needs three things: professionalism, quantitative flow, and trust. Litecoin has it all.
+                            </p>
+						</div>
+						<!-- Single Testimonial Ends -->
+					</div>
+					<div id="bx-pager" class="client-photos">
+						<a data-slide-index="0" href="" class="photo-hold">
+							<h3>1</h3>
+						</a>
+						<a data-slide-index="1" href="" class="photo-hold">
+							<h3>2</h3>
+						</a>
+						<a data-slide-index="2" href="" class="photo-hold">
+							<h3>3</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=== Testimonials section Ends ===-->
+
+{% include 'crypto_app/footer.html' %}

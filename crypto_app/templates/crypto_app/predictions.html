@@ -1,0 +1,165 @@
+{% include 'crypto_app/header.html' %}
+{% load static %}
+{% block content %}
+<style>
+.button {
+  padding: 15px 25px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #2c3539;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  line-height: 8px;
+}
+
+.button:hover {background-color: #00b2ee}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+//////////////////////================================================
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+</style>
+
+<!--=== Header section Starts ===-->
+	<div id="header" class="header-section">
+		<!-- sticky-bar Starts-->
+		<div class="sticky-bar-wrap">
+			<div class="sticky-section">
+				<div id="topbar-hold" class="nav-hold container">
+					<nav class="navbar" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<!--=== Site Name ===-->
+							<a class="site-name navbar-brand" href="/crypto_app/"><span>C</span>rypto <span>A</span>pp</a>
+						</div>
+
+						<!-- Main Navigation menu Starts -->
+						<div class="collapse navbar-collapse navbar-responsive-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="/crypto_app/">Home</a></li>
+								<li><a href="/crypto_app/#section-feature">Top Cryptos</a></li>
+								<li class="current"><a href="predictions.html">Predictions</a></li>
+								<li><a href="rankwise.html">Current Rank<sub> (Profitwise)</sub></a></li>
+								<li><a href="http://127.0.0.1:8050/">Live Sentiments</a></li>
+								<li><a href="#section-pricing">Live Price</a></li>
+								<li><a href="http://192.168.43.1:8888">Live Mining</a></li>
+							</ul>
+						</div>
+						<!-- Main Navigation menu ends-->
+					</nav>
+				</div>
+			</div>
+		</div>
+    </div>
+		<!-- sticky-bar Ends-->
+		<!--=== Header section Ends ===-->
+
+{% with 'Bitcoin Ethereum Ripple Litecoin Monero IOTA Steem Maidsafe' as array %}
+    {% with 'bitcoin ethereum ripple litecoin monero iota steem maidsafe' as array2 %}
+
+        {% for i in array2.split %}
+	<!--=== Step-1 section Starts ===-->
+	<section id="step-1" class="section-step step-wrap">
+		<div class="container step animated" data-animation="bounceInLeft" data-animation-delay="700">
+			<div class="row">
+				<!-- Step Description Starts -->
+				<div class="col-md-8 step-desc">
+					<div class="col-md-2 center">
+						<div class="step-no">
+							<span class="no-inner">{{forloop.counter}}</span>
+						</div>
+					</div>
+					<div class="col-md-10 step-details">
+							<h3 class="step-title color-scheme">{{i}}</h3>
+							<h5 class="step-description"><strong>Average Accuracy   : </strong>91%</h5>
+					</div>
+					<!-- End step-details -->
+				</div>
+					<div class="btn-group">
+                                <button class="button accordion">Price vs Volume (Historical)</button>
+                                    <div class="panel">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'closing_price_vs_volume/'}}{{i}}{{'.png'}}">
+                                    </div>
+                                <button class="button accordion">Data Division (Train/Test)</button>
+                                    <div class="panel">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'testing_and_training_data_division/'}}{{i}}{{'.png'}}">
+                                    </div>
+                                <button class="button accordion">Daily Price Change</button>
+                                    <div class="panel">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'daily_price_change/'}}{{i}}{{'.png'}}">
+                                    </div>
+                                <button class="button accordion">Predictive Models Comparison</button>
+                                    <div class="panel col-md-12">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'regression_one_variable/'}}{{i}}{{'.png'}}" style="height:500px;width:700px;"><img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'regression_one_variable/'}}{{'zoomed/'}}{{i}}{{'.png'}}" style="height:400px;width:430px;">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'regression_multi_variable/'}}{{i}}{{'.png'}}" style="height:500px;width:700px;"><img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'regression_multi_variable/'}}{{'zoomed/'}}{{i}}{{'.png'}}" style="height:400px;width:430px;">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'simple_lag_model/'}}{{i}}{{'.png'}}" style="height:500px;width:700px;"><img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'simple_lag_model/'}}{{'zoomed/'}}{{i}}{{'.png'}}" style="height:400px;width:430px;">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'single_point_random_walk/'}}{{i}}{{'.png'}}" style="height:500px;width:700px;"><img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'single_point_random_walk/'}}{{'zoomed/'}}{{i}}{{'.png'}}" style="height:400px;width:430px;">
+                                      <img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'full_interval_random_walk/'}}{{i}}{{'.png'}}" style="height:500px;width:700px;"><img src="{% static '' %}{{'crypto_app/'}}{{'images/'}}{{'predictions/'}}{{'full_interval_random_walk/'}}{{'zoomed/'}}{{i}}{{'.png'}}" style="height:400px;width:430px;">
+                                    </div>
+                    </div>
+                </div>
+
+			</div>
+				<!-- Step Description Ends -->
+		</div>
+
+	</section>
+	<!--=== Step-1 section Ends ===-->
+        {% endfor %}
+    {% endwith %}
+{% endwith %}
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+{% endblock %}
+{% include 'crypto_app/footer.html' %}

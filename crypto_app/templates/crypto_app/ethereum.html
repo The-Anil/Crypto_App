@@ -1,0 +1,123 @@
+{% include 'crypto_app/header.html' %}
+{% load static %}
+	<!--=== Header section Starts ===-->
+	<div id="header" class="header-section">
+		<!-- sticky-bar Starts-->
+		<div class="sticky-bar-wrap">
+			<div class="sticky-section">
+				<div id="topbar-hold" class="nav-hold container">
+					<nav class="navbar" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<!--=== Site Name ===-->
+							<a class="site-name navbar-brand" href="/crypto_app/"><span>C</span>rypto <span>A</span>pp</a>
+						</div>
+
+						<!-- Main Navigation menu Starts -->
+						<div class="collapse navbar-collapse navbar-responsive-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="/crypto_app/">Back</a></li>
+							</ul>
+						</div>
+						<!-- Main Navigation menu ends-->
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- sticky-bar Ends-->
+    </div>
+<!--=== Header section Ends ===-->
+
+
+	<!--=== Step-1 section Starts ===-->
+	<section id="step-1" class="section-step step-wrap">
+		<div class="container step animated" data-animation="bounceInLeft" data-animation-delay="700">
+			<div class="row">
+				<!-- Step Description Starts -->
+				<div class="col-md-8 step-desc">
+					<div class="col-md-2 center">
+						<div class="step-no">
+							<span class="no-inner">💰</span>
+						</div>
+					</div>
+
+					<div class="col-md-10 step-details">
+							<h3 class="step-title color-scheme">Ethereum</h3>
+							<p class="step-description">Ethereum is a decentralized platform that runs on blockchain technology to ensure that smart contracts can work cost effectively and with minimal downtime.</p>
+                            <h5 class="step-title color-scheme">Unique Features : </h5>
+                        <ul class="sub-steps"> <!-- Sub steps here -->
+								<li>
+									<span class="icon fa fa-pencil color-scheme"></span>
+									<span class="sub-text">Proof of Work</span>
+								</li>
+                                <li>
+									<span class="icon fa fa-pencil color-scheme"></span>
+									<span class="sub-text">Decentrailised</span>
+								</li>
+							</ul>
+					</div> <!-- End step-details -->
+				</div>
+				<!-- Step Description Ends -->
+				<div class="col-md-4 step-img">
+					<img src="{% static 'crypto_app/images/ethereum.png' %}" alt="" /> <!-- Step Photo Here -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=== Step-1 section Ends ===-->
+
+<!--=== Testimonials section Starts ===-->
+	<section id="section-testimonials" class="testimonials-wrap">
+		<div class="section-overlay"></div>
+		<div class="container testimonials center animated" data-animation="rollIn" data-animation-delay="500">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="testimonial-slider">
+						<!-- Single Testimonial Starts -->
+
+
+						<!-- Single Testimonial Starts -->
+						<div class="testimonial">
+							<p class="comment">
+								While bitcoin aims to disrupt PayPal and online banking, ethereum has the goal of using a blockchain to replace internet third parties — those that store data, transfer mortgages and keep track of complex financial instruments.
+							</p>
+						</div>
+						<!-- Single Testimonial Ends -->
+
+						<!-- Single Testimonial Starts -->
+						<div class="testimonial">
+							<p class="comment">
+								For the previous reasons, numerous investors have started to take a shine to Ethereurm which explains its recent meteoric rise. Ether went from approximately $16 in early February to over $50 today. This may cause a number of people to question whether it is a bubble and could come to adjust. This can indeed be difficult to judge as the rise was indeed quite sharp.
+							</p>
+						</div>
+						<!-- Single Testimonial Ends -->
+                        <div class="testimonial">
+							<p class="comment">
+								Ethereum is also alot more volatile than Bitcoin currently. However, this is probably as a result of its infancy status.I think Ethereum will replace Bitcoin in the long run and that yes, you should invest, but invest with caution.
+							</p>
+						</div>
+						<!-- Single Testimonial Ends -->
+					</div>
+					<div id="bx-pager" class="client-photos">
+						<a data-slide-index="0" href="" class="photo-hold">
+							<h3>1</h3>
+						</a>
+						<a data-slide-index="1" href="" class="photo-hold">
+							<h3>2</h3>
+						</a>
+						<a data-slide-index="2" href="" class="photo-hold">
+							<h3>3</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=== Testimonials section Ends ===-->
+
+{% include 'crypto_app/footer.html' %}

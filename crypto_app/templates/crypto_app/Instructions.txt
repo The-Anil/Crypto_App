@@ -1,0 +1,55 @@
+1.---------------------MAILCHIMP---------------------------------------
+
+Go to js > custom.js
+
+Find MailCimp Plugin Script and replace your custom URL inside ''
+
+Example:  url: 'http://http://themegret.us9.list-manage1/bla-bla-bla'
+
+_______________________________________________________________________
+
+2.--------------------Contact Form------------------------------------
+
+Go to contact > contact.php replace YOUR_MAIL with your email address inside ''
+
+Example: if ( mail( 'myNameIsJack@gmail.com', $mail_subject, $message, "From:" . $email ) )
+
+
+________________________________________________________________________
+
+3.------------------Video background------------------------
+
+On video background html document you will see a section 
+
+named "Parallax Content Slider With Video Background"
+
+Change the name of your video without file extension in data attribute data-vide-bg.
+
+Example: data-vide-bg="video/YOUR_video"
+
+keep your video file ( In mp4, webm, ogv format for cross browser support ) in video folder.
+
+Also keep same named image(.jpg, .png) files for safety.
+
+
+
+
+
+
+--------------------------------Thats All--------------------------------------
+
+---------------------Thanks again for buying Jack template :) ----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
